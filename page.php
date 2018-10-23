@@ -9,7 +9,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Olakorea
+ * @package Potaruru
  */
 
 get_header();
@@ -17,17 +17,17 @@ get_header();
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
+		<div class="container mt-2">
+   			 <?php echo get_field('ads_single_page_content', 'option') ?>
+		</div>
 
 		<?php
 		while ( have_posts() ) :
 			the_post();
 
-			get_template_part( 'template-parts/content', 'page' );
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
+			echo "<section>";
+				get_template_part( 'template/template-parts/content', 'page' );
+			echo "</section>";
 
 		endwhile; // End of the loop.
 		?>
@@ -36,5 +36,4 @@ get_header();
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();

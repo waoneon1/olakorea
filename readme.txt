@@ -1,4 +1,4 @@
-=== Olakorea ===
+=== Potaruru ===
 
 Contributors: automattic
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
@@ -9,11 +9,11 @@ Stable tag: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 
-A starter theme called Olakorea.
+A starter theme called Potaruru.
 
 == Description ==
 
-Description
+Theme For potaruru.com
 
 == Installation ==
 
@@ -25,7 +25,7 @@ Description
 
 = Does this theme support any plugins? =
 
-Olakorea includes support for Infinite Scroll in Jetpack.
+Potaruru includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 

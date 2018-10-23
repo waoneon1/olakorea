@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Olakorea
+ * @package Potaruru
  */
 
 ?>
@@ -14,45 +14,57 @@
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'ola' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'pota' ); ?></a>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$ola_description = get_bloginfo( 'description', 'display' );
-			if ( $ola_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $ola_description; /* WPCS: xss ok. */ ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'ola' ); ?></button>
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			) );
-			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+	<header id="header">
+		<div class="container">
+			<div class="navbar-backdrop">
+				<div class="navbar">
+					<div class="navbar-left">
+						<a class="navbar-toggle"><i class="fa fa-bars"></i></a>
+						<a href="<?php echo get_home_url() ?>" class="logo">
+							<img src="<?php echo get_template_directory_uri() ?>/src/img/logo.png" alt="Potaruru">
+						</a>
+						<nav class="nav">
+							<?php
+								wp_nav_menu( array(
+									'theme_location'  	=> 'menu-1',
+									'menu_id'         	=> 'primary-menu',
+									'container'			=> false,
+									'walker'      		=> new pota_walker_nav_menu()
+								) );
+							?>
+						</nav>
+					</div>
+						<div class="nav navbar-right">
+							<ul>
+								<?php if (1==2): ?>
+								<li class="hidden-xs-down"><a href="login.html">Login</a></li>
+								<li class="hidden-xs-down"><a href="register.html">Register</a></li>
+								<?php endif ?>
+								<li><a data-toggle="search"><i class="fa fa-search"></i></a></li>
+							</ul>
+						</div>
+				</div>
+			</div>
+			<div class="navbar-search">
+				<div class="container">
+					<form method="get" action="<?php echo esc_url( home_url( '/' ) ) ?>" >
+						<input type="text" class="form-control" placeholder="Search..." name="s">
+						<i class="fa fa-times close"></i>
+					</form>
+				</div>
+			</div>
+		</div>
+		<progress value="0"></progress>
+	</header> <!-- #header -->
 
 	<div id="content" class="site-content">

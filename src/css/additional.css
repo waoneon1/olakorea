@@ -1,0 +1,53 @@
+.site-content .post-card .post-title {
+     min-height: 0px; 
+}
+
+.post-card .post-title a:hover {
+     color: #ce1126;
+}
+
+.post-card .post-thumbnail {
+	margin-left: -20px; 
+	margin-right: -20px; 
+	margin-top: -20px; 
+}
+
+#header {
+	background-color: black;	
+}
+
+#header .navbar {
+	background-color: black;
+}
+
+#header .nav > ul > li > a,  
+#header .nav > ul > li > ul > li a {
+	color: white;
+}
+
+#header .nav > ul > li > a:hover, 
+#header .nav > ul > li > ul > li a:hover, 
+#header .nav > ul > li > ul > li a:hover {
+	color: #999;
+}
+
+
+.post-categories > li {
+	background-color: red;
+}
+
+.catlink a:hover {
+	color: #ce1126;
+	background-color: #f9f9f9;
+	padding: 2px;
+}
+
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .post-card .post-thumbnail {
+		margin-left: 0px; 
+		margin-right: 0px; 
+		margin-top: 0px; 
+	}
+}

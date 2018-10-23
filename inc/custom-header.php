@@ -8,33 +8,33 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
- * @package Olakorea
+ * @package Potaruru
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses ola_header_style()
+ * @uses pota_header_style()
  */
-function ola_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'ola_custom_header_args', array(
+function pota_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'pota_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
 		'width'                  => 1000,
 		'height'                 => 250,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'ola_header_style',
+		'wp-head-callback'       => 'pota_header_style',
 	) ) );
 }
-add_action( 'after_setup_theme', 'ola_custom_header_setup' );
+add_action( 'after_setup_theme', 'pota_custom_header_setup' );
 
-if ( ! function_exists( 'ola_header_style' ) ) :
+if ( ! function_exists( 'pota_header_style' ) ) :
 	/**
 	 * Styles the header image and text displayed on the blog.
 	 *
-	 * @see ola_custom_header_setup().
+	 * @see pota_custom_header_setup().
 	 */
-	function ola_header_style() {
+	function pota_header_style() {
 		$header_text_color = get_header_textcolor();
 
 		/*
