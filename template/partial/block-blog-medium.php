@@ -43,7 +43,15 @@ if ($have_posts) {
     		<?php setup_postdata($post) ?>
     		<!-- post -->
     		<div class="post post-md">
-    			<?php pota_post_thumbnail($post->ID, '320x180', $post->title, get_permalink($post->ID)) ?>
+        		<?php //pota_post_thumbnail($post->ID, '320x180', $post->title, get_permalink($post->ID)) ?>
+
+                <?php $image = has_post_thumbnail() ? pota_image($post->ID, '320x180', 'wp', false) : pota_placeholder('pota_750x450'); ?>
+                <div class="post-thumbnail">
+                    <a href="<?php the_permalink() ?>">
+                         <img src="<?php echo $image ?>" alt="<?php the_title() ?>">
+                    </a>
+                </div>
+
     			<div class="post-block">
     				<h2 class="post-title"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
     				<?php pota_component('post-meta') ?>

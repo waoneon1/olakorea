@@ -48,7 +48,7 @@ if (is_tag()){
 <section>
     <div class="container">
         <div class="row col-card-wraper">
-            <?php get_template_part( 'template/partial/block', 'blog-cards' ) ?>
+            <?php get_template_part( 'template/partial/block', 'blog-content' ) ?>
         </div>
     </div>
     <div class="container">

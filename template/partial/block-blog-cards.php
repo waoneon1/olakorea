@@ -53,7 +53,6 @@ $posts = get_posts($arg);
 	<?php setup_postdata($post) ?>
 	<div class="col-sm-4 col-card">
 		
-
 		<div class="post post-card">
 			<!-- <div>
 				<a href="profile.html">

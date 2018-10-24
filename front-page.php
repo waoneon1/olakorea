@@ -12,9 +12,7 @@ get_header();
 $type = get_field('type'); 
 ?>
 
-<div class="container mt-2">
-        <?php echo get_field('ads_single_page_content', 'option') ?>
-</div>
+
 
 <div class="container">
 	<div class="row"><?php get_template_part( 'template/partial/feature', 'banner-'.$type ) ?></div>

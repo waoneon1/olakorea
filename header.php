@@ -67,4 +67,8 @@
 		<progress value="0"></progress>
 	</header> <!-- #header -->
 
+	<div class="container py-2 d-flex justify-content-center">
+        <?php echo get_field('ads_single_page_content', 'option') ?>
+</div>
+
 	<div id="content" class="site-content">

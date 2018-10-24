@@ -9,7 +9,6 @@
 			</div> -->
 			<?php $image = has_post_thumbnail() ? pota_image($post->ID, '750x450', 'wp', false) : pota_placeholder('pota_750x450'); ?>
 
-			
 			<div class="post-thumbnail">
 				<a href="<?php the_permalink() ?>">
 					 <img src="<?php echo $image ?>" alt="<?php the_title() ?>">
@@ -17,21 +16,24 @@
 				</a>
 			</div>
 
-			<div class="row" style="margin-left: -5px;">
+
+			<!-- <div class="row" style="margin-left: -5px;"> -->
 				<?php 
-				$categories = get_categories();
+				// $categories = get_categories();
 				
-				foreach($categories as $category) : ?>
-				  <div class="col-xs-3 catlink" style="padding:3px; font-size: 13px;"> 
+				// foreach($categories as $category) : 
+				?>
+<!-- 				  <div class="col-xs-3 catlink" style="padding:3px; font-size: 13px;"> 
 				  	<p style="color: #ce1126;">
-					   <a href="<?php echo get_category_link($category->term_id); ?>"> 
-					   		<?php echo $category->name; ?>
-					   </a>
+					   <a href="<?php echo get_category_link($category->term_id); ?>">  -->
+					   		<?php //echo $category->name; ?>
+<!-- 					   </a>
 					</p>
-				   </div>
-				<?php endforeach; ?>
-		    </div>
+				   </div> -->
+				<?php //endforeach; ?>
+		    <!-- </div> -->
 		
+
 			
 			<div>
 				<h2 class="post-title">
@@ -40,7 +42,7 @@
 				<?php pota_component( 'post-meta' ) ?>
 			</div>
 
-			<?php pota_blurb_autofill(); ?>
+			<?php //pota_blurb_autofill(); ?>
 
 <!-- 			<div class="post-footer">
 				<a class="float-right p-t-10 btn btn-secondary" href="<?php the_permalink() ?>" role="button">Read More</a> 

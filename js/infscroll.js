@@ -20,7 +20,7 @@
             if ($('body').hasClass('header-scroll')) {
                 if (!$("#loader").hasClass("active")) {
                     $("#loader").addClass("active");
-                    //window.location.href = url + nextpage;
+                    window.location.href = url + nextpage;
                     if (console){
                         console.log("loading new items");
                     }

@@ -70,20 +70,21 @@ $posts = get_posts($arg);
 				</a>
 			</div>
 
-			<div class="row" style="margin-left: -5px;">
+			<!-- <div class="row" style="margin-left: -5px;"> -->
 				<?php 
-				$categories = get_categories();
+				// $categories = get_categories();
 				
-				foreach($categories as $category) : ?>
-				  <div class="col-xs-3 catlink" style="padding:3px; font-size: 13px;"> 
+				// foreach($categories as $category) : 
+				?>
+<!-- 				  <div class="col-xs-3 catlink" style="padding:3px; font-size: 13px;"> 
 				  	<p style="color: #ce1126;">
-					   <a href="<?php echo get_category_link($category->term_id); ?>"> 
-					   		<?php echo $category->name; ?>
-					   </a>
+					   <a href="<?php echo get_category_link($category->term_id); ?>">  -->
+					   		<?php //echo $category->name; ?>
+	<!-- 				   </a>
 					</p>
-				   </div>
-				<?php endforeach; ?>
-		    </div>
+				   </div> -->
+				<?php //endforeach; ?>
+		    <!-- </div> -->
 		
 			
 			<div>
@@ -93,7 +94,7 @@ $posts = get_posts($arg);
 				<?php pota_component( 'post-meta' ) ?>
 			</div>
 
-			<?php pota_blurb_autofill(); ?>
+			<?php //pota_blurb_autofill(); ?>
 
 <!-- 			<div class="post-footer">
 				<a class="float-right p-t-10 btn btn-secondary" href="<?php the_permalink() ?>" role="button">Read More</a> 

@@ -47,7 +47,6 @@ else
 					
 					<!-- post -->
 					<div class="post post-single">
-						
 						<?php if ($paged == 1): ?>
 							<h2 class="post-title"><?php the_title() ?></h2>
 							<?php pota_component( 'post-meta' ) ?>

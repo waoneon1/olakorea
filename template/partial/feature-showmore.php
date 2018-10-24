@@ -12,7 +12,7 @@ $ft = get_posts(array(
 	'posts_per_page'	=> 6,
 	'post_type' 		=> 'post',
 	'post_status'       => 'publish',
-	'orderby' 			=> 'rand',
+	// 'orderby' 			=> 'rand',
 	'exclude'			=> $post->ID
 )); ?>
 
@@ -31,7 +31,7 @@ $ft = get_posts(array(
 				<a href="<?php the_permalink($value->ID) ?>" class="featured-article" rel="bookmark">
 					<div class="featured-article-image-container">
 						<img src="<?php pota_image($value->ID, '750x450') ?>" 
-							alt="<?php echo $value->ID->post_title ?>">
+							alt="<?php echo $value->ID->post_title; ?>">
 						<div class="featured-article-image-container-gradient"></div>
 						<div class="article-title">
 							<span class="post-title"><?php echo $value->post_title ?></span>
